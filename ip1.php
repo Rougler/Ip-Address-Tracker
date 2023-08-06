@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ip_address'])) {
 
     // Create a cURL request to the IPinfo API to get IP details
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://ipinfo.io/{$_POST['ip_address']}?token={$apiKey}");
+    curl_setopt($ch, CURLOPT_URL, "https://unsplash.com/{$_POST['ip_address']}?token={$apiKey}");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($ch);
     curl_close($ch);
